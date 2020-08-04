@@ -15,7 +15,7 @@ class String
   end
 
   def count_sentences
-    sentence_array = self.split(/[.]|[\?]|[!*]/)
+    sentence_array = self.split(/[.]|[?]|!/).find_all{|element|element != ""}
     binding.pry
     sentence_array.count
   end
